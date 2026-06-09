@@ -1,6 +1,6 @@
 {
   "name": "hqid7",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lexicographically sortable identifiers: UUIDv7 binary format (RFC 9562) with a compact 23-character Base58 string encoding. TypeScript/JavaScript port of hqid7.",
   "keywords": [
     "uuid",
@@ -27,7 +27,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "types": "./dist/index.d.ts",
   "bin": {
