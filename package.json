@@ -1,0 +1,55 @@
+{
+  "name": "hqid7",
+  "version": "0.1.0",
+  "description": "Lexicographically sortable identifiers: UUIDv7 binary format (RFC 9562) with a compact 23-character Base58 string encoding. TypeScript/JavaScript port of hqid7.",
+  "keywords": [
+    "uuid",
+    "uuidv7",
+    "uuid7",
+    "rfc9562",
+    "base58",
+    "sortable",
+    "identifier",
+    "id"
+  ],
+  "license": "MIT",
+  "author": "Hypersequent DMCC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hypersequent/hqid7js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hypersequent/hqid7js/issues"
+  },
+  "homepage": "https://github.com/Hypersequent/hqid7js#readme",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "hqid7": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test",
+    "test:node": "bash mnode-test/docker-test.sh",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
