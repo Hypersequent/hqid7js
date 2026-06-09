@@ -5,7 +5,7 @@ import {
   decodeBase58,
   encodeBase58,
   encodeBase58Raw,
-  newString,
+  hqid7,
 } from "../src/index.ts";
 
 const u = (...init: Array<[number, number]>): Uint8Array => {
@@ -132,11 +132,11 @@ describe("padding preserves order across length changes", () => {
   });
 });
 
-describe("newString", () => {
+describe("hqid7", () => {
   it("produces 23-char ids that are time-ordered", async () => {
-    const a = newString();
+    const a = hqid7();
     await new Promise((r) => setTimeout(r, 2));
-    const b = newString();
+    const b = hqid7();
     assert.equal(a.length, 23);
     assert.equal(b.length, 23);
     assert.ok(a < b, `${a} < ${b}`);

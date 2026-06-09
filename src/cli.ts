@@ -3,7 +3,7 @@
 
 import { createRequire } from "node:module";
 
-import { encodeBase58, parse, uuid7 } from "./index.ts";
+import { hqid7, parse } from "./index.ts";
 
 function version(): void {
   const require = createRequire(import.meta.url);
@@ -12,7 +12,7 @@ function version(): void {
 }
 
 function generate(): void {
-  console.log(encodeBase58(uuid7()));
+  console.log(hqid7());
 }
 
 function hex(value: bigint, width: number): string {

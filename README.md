@@ -26,9 +26,10 @@ Requires Node.js 20+ (uses the Web Crypto and `performance` globals). Ships as E
 ## Usage
 
 ```ts
-import { newString } from "hqid7";
+import { hqid7 } from "hqid7";
+// default export works too: import hqid7 from "hqid7";
 
-const id = newString(); // "1C3Rttz29_K2U2o4AdhPF5b" — always 23 characters
+const id = hqid7(); // "1C3Rttz29_K2U2o4AdhPF5b" — always 23 characters
 ```
 
 ### Lower-level API

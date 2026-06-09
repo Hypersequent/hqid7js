@@ -1,15 +1,9 @@
 // Smoke test for the published package, run inside each Node version container.
 // Imports the installed `hqid7` package (ESM) and checks core behavior.
-import {
-  decodeBase58,
-  encodeBase58,
-  newString,
-  parse,
-  uuid7,
-} from "hqid7";
+import { decodeBase58, encodeBase58, hqid7, parse, uuid7 } from "hqid7";
 
-// newString() shape: 23 chars, `_` separator at index 9.
-const id = newString();
+// hqid7() shape: 23 chars, `_` separator at index 9.
+const id = hqid7();
 if (id.length !== 23) throw new Error(`bad length: ${id} (${id.length})`);
 if (id[9] !== "_") throw new Error(`bad separator: ${id}`);
 

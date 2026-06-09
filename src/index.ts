@@ -69,9 +69,11 @@ export function uuid7(): UUID {
 }
 
 /** Generate a new hqid7 and return its canonical 23-character string form. */
-export function newString(): string {
+export function hqid7(): string {
   return encodeBase58(uuid7());
 }
+
+export default hqid7;
 
 /** Encode a UUID to raw Base58 (no padding, no separator). */
 export function encodeBase58Raw(uuid: UUID): string {
